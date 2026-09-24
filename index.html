@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om Infrastructure</title>
+  <title>Om Infrastructure - Building Today, Better Tomorrow</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header>
-    <div class="logo-container">
-      <div class="logo">OM INFRA</div>
-    </div>
+    <a href="index.html" class="logo-container">
+      <img src="img/logo.png" alt="Om Infrastructure Logo" class="logo-img">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html" data-i18n="nav_home">Home</a></li>
@@ -30,77 +30,102 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero fade-up">
+    <!-- Hero with Background Image & Stats Infographic -->
+    <section class="hero fade-up" style="background-image: url('img/hero_bg.jpg');">
       <h1 data-i18n="hero_title">Building Today, Better Tomorrow</h1>
       <p data-i18n="hero_subtitle">We are a leading infrastructure company known for excellence in Civil, Electrical, and Mechanical solutions in Kutch.</p>
-      <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
+      
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Safety Compliance</div>
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
+      </div>
     </section>
 
-    <!-- Pain Points -->
-    <section id="why-us">
-      <h2 class="section-title fade-up" data-i18n="pain_title">Why Choose Om Infrastructure?</h2>
+    <!-- Visual Services Section -->
+    <section id="services">
+      <h2 class="section-title fade-up" data-i18n="services_title">Our Core Services</h2>
+      <p class="section-subtitle fade-up">Providing end-to-end industrial and residential infrastructure solutions with uncompromising precision.</p>
+      
       <div class="grid">
         <div class="card fade-up">
+          <img src="img/civil_icon.jpg" alt="Civil Infrastructure" class="card-img">
+          <h3 data-i18n="srv_civil_title">Civil Infrastructure</h3>
+          <p data-i18n="srv_civil_desc">Building construction, RCC structures, roads, and foundations.</p>
+        </div>
+        <div class="card fade-up">
+          <img src="img/electrical_icon.jpg" alt="Electrical Solutions" class="card-img">
+          <h3 data-i18n="srv_elec_title">Electrical Solutions</h3>
+          <p data-i18n="srv_elec_desc">House/Industrial wiring, street lighting, HT/LT cable laying.</p>
+        </div>
+        <div class="card fade-up">
+          <img src="img/mechanical_icon.jpg" alt="Mechanical Solutions" class="card-img">
+          <h3 data-i18n="srv_mech_title">Mechanical Solutions</h3>
+          <p data-i18n="srv_mech_desc">HVAC, plumbing, fire fighting systems, and pump installation.</p>
+        </div>
+      </div>
+      <div class="text-center mt-2 fade-up">
+        <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Explore All Services</a>
+      </div>
+    </section>
+
+    <!-- Infographic Process Section -->
+    <section id="process">
+      <h2 class="section-title fade-up" data-i18n="process_title">Our Working Process</h2>
+      <p class="section-subtitle fade-up">From blueprint to completion, our streamlined approach ensures timely and safe delivery.</p>
+      
+      <div class="process-timeline fade-up">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-text" data-i18n="proc_1">Discovery & Planning</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-text" data-i18n="proc_2">Design & Engineering</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-text" data-i18n="proc_3">Execution & Construction</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-text" data-i18n="proc_4">Delivery & Maintenance</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values & Why Us -->
+    <section id="why-us" style="background: rgba(14, 165, 233, 0.05);">
+      <h2 class="section-title fade-up" data-i18n="pain_title">Why Choose Om Infrastructure?</h2>
+      <div class="grid">
+        <div class="card fade-up" style="border-top: 4px solid var(--color-primary);">
           <h3 data-i18n="pain_1_title">Quality Assured</h3>
           <p data-i18n="pain_1_desc">We deliver superior quality infrastructure solutions with unyielding integrity.</p>
         </div>
-        <div class="card fade-up">
+        <div class="card fade-up" style="border-top: 4px solid var(--color-secondary);">
           <h3 data-i18n="pain_2_title">Timely Delivery</h3>
           <p data-i18n="pain_2_desc">Time is money. We ensure all our projects are completed safely and on schedule.</p>
         </div>
-        <div class="card fade-up">
+        <div class="card fade-up" style="border-top: 4px solid var(--color-primary);">
           <h3 data-i18n="pain_3_title">Diverse Expertise</h3>
           <p data-i18n="pain_3_desc">From earthwork to HVAC and highmast lighting, we handle everything under one roof.</p>
         </div>
       </div>
     </section>
 
-    <!-- Services Preview -->
-    <section id="services">
-      <h2 class="section-title fade-up" data-i18n="services_title">Our Core Services</h2>
-      <div class="grid">
-        <div class="card fade-up">
-          <h3 data-i18n="srv_civil_title">Civil Infrastructure</h3>
-          <p data-i18n="srv_civil_desc">Building construction, RCC structures, roads, and foundations.</p>
-        </div>
-        <div class="card fade-up">
-          <h3 data-i18n="srv_elec_title">Electrical Solutions</h3>
-          <p data-i18n="srv_elec_desc">House/Industrial wiring, street lighting, HT/LT cable laying.</p>
-        </div>
-        <div class="card fade-up">
-          <h3 data-i18n="srv_mech_title">Mechanical Solutions</h3>
-          <p data-i18n="srv_mech_desc">HVAC, plumbing, fire fighting systems, and pump installation.</p>
-        </div>
-      </div>
-      <div class="text-center mt-2 fade-up">
-        <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process">
-      <h2 class="section-title fade-up" data-i18n="process_title">Our Working Process</h2>
-      <div class="grid">
-        <div class="card fade-up"><h3 data-i18n="proc_1">1. Discovery & Planning</h3></div>
-        <div class="card fade-up"><h3 data-i18n="proc_2">2. Design & Engineering</h3></div>
-        <div class="card fade-up"><h3 data-i18n="proc_3">3. Execution & Construction</h3></div>
-        <div class="card fade-up"><h3 data-i18n="proc_4">4. Delivery & Maintenance</h3></div>
-      </div>
-    </section>
-
-    <!-- Portfolio Preview -->
-    <section id="portfolio">
-      <h2 class="section-title fade-up" data-i18n="portfolio_title">Trusted by Valued Clients</h2>
-      <div class="grid">
-        <div class="card fade-up"><h3 data-i18n="client_1">Keswam Residency</h3></div>
-        <div class="card fade-up"><h3 data-i18n="client_2">Electrona</h3></div>
-        <div class="card fade-up"><h3 data-i18n="client_3">Digitron Automation</h3></div>
-      </div>
-      <div class="text-center mt-2 fade-up">
-        <a href="portfolio.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
-      </div>
-    </section>
   </main>
 
   <a href="https://wa.me/919925457007" class="btn-whatsapp" target="_blank">
@@ -111,10 +136,20 @@
   </a>
 
   <footer>
-    <p data-i18n="footer_address">4-627, First Floor, Benefit corner, Nana Kapaya, Ta. Mundra, Kutch - 370415</p>
-    <p data-i18n="footer_phone">+91 9925457007 / 9687877007 / 8238267007</p>
-    <p data-i18n="footer_email">ominfrastructure2024@gmail.com</p>
-    <p data-i18n="footer_rights">&copy; 2026 Om Infrastructure. All rights reserved.</p>
+    <div class="footer-col">
+      <img src="img/logo.png" alt="Logo" style="height: 40px; margin-bottom: 1rem;">
+      <p data-i18n="about_desc">We are a trusted name in the field of Civil, Electrical and Mechanical solutions based in Mundra, Kutch.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p data-i18n="footer_address">4-627, First Floor, Benefit corner, Nana Kapaya, Ta. Mundra, Kutch - 370415</p>
+      <p data-i18n="footer_phone">+91 9925457007 / 9687877007 / 8238267007</p>
+      <p data-i18n="footer_email">ominfrastructure2024@gmail.com</p>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_rights">&copy; 2026 Om Infrastructure. All rights reserved.</p>
+      <p>UDYAM No: UDYAM-GJ-13-0123702 | GST: 24AFLPJ8091G2Z7</p>
+    </div>
   </footer>
 
   <script src="js/i18n.js"></script>

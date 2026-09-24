@@ -1,6 +1,7 @@
 :root {
   --color-bg: #0f172a;
   --color-surface: rgba(30, 41, 59, 0.7);
+  --color-surface-solid: #1e293b;
   --color-primary: #f97316;
   --color-secondary: #0ea5e9;
   --color-text: #f1f5f9;
@@ -40,18 +41,10 @@ header {
   align-items: center;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.logo-img {
+  height: 50px;
+  width: auto;
+  border-radius: 4px;
 }
 
 nav ul {
@@ -88,13 +81,31 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 2rem 5%;
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(15,23,42,0.8), rgba(15,23,42,1));
+  z-index: 1;
+}
+
+.hero > * {
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  background: linear-gradient(90deg, #fff, var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
 }
 
 .hero p {
@@ -104,7 +115,34 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-/* Cards (Glassmorphism + Glowing Hover) */
+/* Stats Infographic Row */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+}
+
+.stat-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+/* Cards & Images */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -119,6 +157,17 @@ nav a:hover {
   border-radius: 12px;
   padding: 2rem;
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--glass-border);
 }
 
 .card:hover {
@@ -130,40 +179,143 @@ nav a:hover {
 .card h3 {
   color: var(--color-primary);
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Process Infographic Timeline */
+.process-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: var(--glass-border);
+  z-index: 1;
+}
+
+.process-step {
+  background: var(--color-surface-solid);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+  transition: all 0.3s;
+}
+
+.process-step:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
+  border-color: var(--color-secondary);
+}
+
+.process-step .step-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+}
+.process-step .step-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0 10px;
 }
 
 /* Sections */
 section {
-  padding: 4rem 5%;
+  padding: 5rem 5%;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 5%;
+}
+
+.client-card {
+  background: var(--color-surface-solid);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.client-card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 5px 20px rgba(14, 165, 233, 0.2);
+}
+
+.client-card h4 {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.client-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-primary), #ea580c);
   color: #fff;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
 }
 
 .btn-primary:hover {
-  background: #ea580c;
-  box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.6);
 }
 
 .btn-whatsapp {
@@ -188,22 +340,46 @@ section {
 
 /* Footer */
 footer {
-  background: rgba(15, 23, 42, 0.9);
-  padding: 3rem 5%;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 4rem 5%;
   border-top: 1px solid var(--glass-border);
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-footer p {
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.footer-col p, .footer-col a {
   color: var(--color-text-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+  color: var(--color-text-muted);
 }
 
 /* Animations */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up.visible {
