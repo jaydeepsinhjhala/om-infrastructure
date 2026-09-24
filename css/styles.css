@@ -41,10 +41,23 @@ header {
   align-items: center;
 }
 
+.logo-container {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
 .logo-img {
-  height: 50px;
+  height: 45px;
   width: auto;
-  border-radius: 4px;
+  display: block;
 }
 
 nav ul {
@@ -364,6 +377,15 @@ footer {
   margin-bottom: 0.8rem;
   text-decoration: none;
   display: block;
+}
+
+.footer-logo {
+  height: 45px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 16px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 .footer-bottom {
