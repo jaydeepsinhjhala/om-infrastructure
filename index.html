@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Infrastructure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <div class="logo">OM INFRA</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <div class="lang-selector">
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero fade-up">
+      <h1 data-i18n="hero_title">Building Today, Better Tomorrow</h1>
+      <p data-i18n="hero_subtitle">We are a leading infrastructure company known for excellence in Civil, Electrical, and Mechanical solutions in Kutch.</p>
+      <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
+    </section>
+
+    <!-- Pain Points -->
+    <section id="why-us">
+      <h2 class="section-title fade-up" data-i18n="pain_title">Why Choose Om Infrastructure?</h2>
+      <div class="grid">
+        <div class="card fade-up">
+          <h3 data-i18n="pain_1_title">Quality Assured</h3>
+          <p data-i18n="pain_1_desc">We deliver superior quality infrastructure solutions with unyielding integrity.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 data-i18n="pain_2_title">Timely Delivery</h3>
+          <p data-i18n="pain_2_desc">Time is money. We ensure all our projects are completed safely and on schedule.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 data-i18n="pain_3_title">Diverse Expertise</h3>
+          <p data-i18n="pain_3_desc">From earthwork to HVAC and highmast lighting, we handle everything under one roof.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section id="services">
+      <h2 class="section-title fade-up" data-i18n="services_title">Our Core Services</h2>
+      <div class="grid">
+        <div class="card fade-up">
+          <h3 data-i18n="srv_civil_title">Civil Infrastructure</h3>
+          <p data-i18n="srv_civil_desc">Building construction, RCC structures, roads, and foundations.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 data-i18n="srv_elec_title">Electrical Solutions</h3>
+          <p data-i18n="srv_elec_desc">House/Industrial wiring, street lighting, HT/LT cable laying.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 data-i18n="srv_mech_title">Mechanical Solutions</h3>
+          <p data-i18n="srv_mech_desc">HVAC, plumbing, fire fighting systems, and pump installation.</p>
+        </div>
+      </div>
+      <div class="text-center mt-2 fade-up">
+        <a href="services.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <h2 class="section-title fade-up" data-i18n="process_title">Our Working Process</h2>
+      <div class="grid">
+        <div class="card fade-up"><h3 data-i18n="proc_1">1. Discovery & Planning</h3></div>
+        <div class="card fade-up"><h3 data-i18n="proc_2">2. Design & Engineering</h3></div>
+        <div class="card fade-up"><h3 data-i18n="proc_3">3. Execution & Construction</h3></div>
+        <div class="card fade-up"><h3 data-i18n="proc_4">4. Delivery & Maintenance</h3></div>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section id="portfolio">
+      <h2 class="section-title fade-up" data-i18n="portfolio_title">Trusted by Valued Clients</h2>
+      <div class="grid">
+        <div class="card fade-up"><h3 data-i18n="client_1">Keswam Residency</h3></div>
+        <div class="card fade-up"><h3 data-i18n="client_2">Electrona</h3></div>
+        <div class="card fade-up"><h3 data-i18n="client_3">Digitron Automation</h3></div>
+      </div>
+      <div class="text-center mt-2 fade-up">
+        <a href="portfolio.html" class="btn btn-primary" data-i18n="btn_readmore">Read More</a>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/919925457007" class="btn-whatsapp" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.98 1.005-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.886-9.885 9.886m8.413-18.297A11.815 11.815 0 0012.052 0C5.495 0 .16 5.333.158 11.893c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.332 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span data-i18n="btn_whatsapp">Chat on WhatsApp</span>
+  </a>
+
+  <footer>
+    <p data-i18n="footer_address">4-627, First Floor, Benefit corner, Nana Kapaya, Ta. Mundra, Kutch - 370415</p>
+    <p data-i18n="footer_phone">+91 9925457007 / 9687877007 / 8238267007</p>
+    <p data-i18n="footer_email">ominfrastructure2024@gmail.com</p>
+    <p data-i18n="footer_rights">&copy; 2026 Om Infrastructure. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
